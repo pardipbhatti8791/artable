@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="8SV-fl-hhy">
             <objects>
-                <viewController id="rVM-xF-jcl" sceneMemberID="viewController">
+                <viewController id="rVM-xF-jcl" customClass="LoginVC" customModule="Artable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ORW-oY-3wT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9z3-2u-GgT">
                                         <rect key="frame" x="0.0" y="138.33333333333334" width="335" height="31"/>
@@ -54,6 +54,9 @@
                                         <state key="normal" title="Forgot password?">
                                             <color key="titleColor" red="0.83529411764705885" green="0.39215686274509803" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotPasswordTapped:" destination="rVM-xF-jcl" eventType="touchUpInside" id="hlW-md-FDc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaH-2H-cHB" customClass="RoundedButton" customModule="Artable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="181.33333333333331" width="335" height="40"/>
@@ -65,6 +68,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="rVM-xF-jcl" eventType="touchUpInside" id="sqN-f2-NCr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNM-tN-lRW" customClass="RoundedButton" customModule="Artable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="233.33333333333331" width="335" height="40"/>
@@ -90,6 +96,9 @@
                                         <state key="normal" title="Continue as guest">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="guestTapped:" destination="rVM-xF-jcl" eventType="touchUpInside" id="XZ5-p4-qQ2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -112,6 +121,11 @@
                         <viewLayoutGuide key="safeArea" id="1Ps-eo-6JV"/>
                     </view>
                     <navigationItem key="navigationItem" id="J52-bl-7oo"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="s9T-ou-Hql" id="wXS-EH-51R"/>
+                        <outlet property="emailTxt" destination="IHa-QA-sya" id="pqL-bK-CuN"/>
+                        <outlet property="passwordTxt" destination="Aja-UU-yVk" id="pBl-D0-PeX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="987-gP-jtf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
