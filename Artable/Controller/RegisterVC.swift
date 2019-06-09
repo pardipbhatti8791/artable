@@ -81,7 +81,7 @@ class RegisterVC: UIViewController {
                 return
             }
             
-            print("successfully regsitered new user")
+            self.dismiss(animated: true, completion: nil)
         }
     }
     

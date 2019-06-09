@@ -36,7 +36,7 @@ class LoginVC: UIViewController {
                 return
             }
             
-            print("loggedin successfully")
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
