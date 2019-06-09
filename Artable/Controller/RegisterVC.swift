@@ -57,18 +57,15 @@ class RegisterVC: UIViewController {
         
         // Make it so when the passwords match, the checkmarks turn green
         if passwordTxt.text == confirmPassTxt.text {
-            passCheckimg.image = UIImage(named: "green_check")
-            confirmpassCheckImg.image = UIImage(named: "green_check")
+            passCheckimg.image = UIImage(named: AppImages.GreenCheck)
+            confirmpassCheckImg.image = UIImage(named: AppImages.GreenCheck)
         } else {
-            passCheckimg.image = UIImage(named: "red_check")
-            confirmpassCheckImg.image = UIImage(named: "red_check")
+            passCheckimg.image = UIImage(named: AppImages.RedCheck)
+            confirmpassCheckImg.image = UIImage(named: AppImages.RedCheck)
         }
     }
 
     @IBAction func registerTapped(_ sender: Any) {
-        
-        
-        
         guard let email = emailTxt.text, email.isNotEmpty,
             let username = usernameTxt.text, username.isNotEmpty,
             let password = passwordTxt.text, password.isNotEmpty else { return }
