@@ -29,3 +29,7 @@ struct AppColors {
     static let OffWhite = #colorLiteral(red: 0.9625539184, green: 0.9629719853, blue: 0.9751242995, alpha: 1)
 }
 
+struct Identifiers {
+    static let CategoryCell = "CategoryCell"
+}
+

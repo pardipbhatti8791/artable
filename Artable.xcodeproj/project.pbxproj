@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,12 @@
 		0667963922ADACB900731BB8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0667963822ADACB900731BB8 /* Extensions.swift */; };
 		0667963B22ADB24B00731BB8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0667963A22ADB24B00731BB8 /* Constants.swift */; };
 		0667963E22ADB4B400731BB8 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0667963D22ADB4B400731BB8 /* RoundedViews.swift */; };
+		06EC38C322AF043B00DC211E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC38C222AF043B00DC211E /* Category.swift */; };
+		06EC38C422AF043B00DC211E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC38C222AF043B00DC211E /* Category.swift */; };
+		06EC38C722AF050600DC211E /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC38C522AF050600DC211E /* CategoryCell.swift */; };
+		06EC38C822AF050600DC211E /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC38C522AF050600DC211E /* CategoryCell.swift */; };
+		06EC38C922AF050600DC211E /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06EC38C622AF050600DC211E /* CategoryCell.xib */; };
+		06EC38CA22AF050600DC211E /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06EC38C622AF050600DC211E /* CategoryCell.xib */; };
 		24107DAD83A6DC3E93BA3F96 /* Pods_ArtableAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AB26C4B58EE87F4B0A80F9 /* Pods_ArtableAdmin.framework */; };
 		8C585284D85DFB8BDFAE2395 /* Pods_Artable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34FB527D38D634C4DD08144 /* Pods_Artable.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +63,9 @@
 		0667963822ADACB900731BB8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0667963A22ADB24B00731BB8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0667963D22ADB4B400731BB8 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
+		06EC38C222AF043B00DC211E /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		06EC38C522AF050600DC211E /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		06EC38C622AF050600DC211E /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		2C12DFEC212EFE361B950FDC /* Pods-Artable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Artable/Pods-Artable.debug.xcconfig"; sourceTree = "<group>"; };
 		44AB26C4B58EE87F4B0A80F9 /* Pods_ArtableAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtableAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85A74FD2193F9BFAEBBFBFBD /* Pods-ArtableAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtableAdmin.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				0657DBA922AE7C730041EBD3 /* XIBs */,
-				0667963122ADA61200731BB8 /* Model */,
 				0667963022ADA60B00731BB8 /* View */,
 				0667962F22ADA5FE00731BB8 /* Controller */,
 				0667963222ADA61700731BB8 /* Stroyboards */,
@@ -136,6 +144,8 @@
 		06403CDE22AD8F5B0024EDA4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				06EC38CB22AF052800DC211E /* XIBs */,
+				0667963122ADA61200731BB8 /* Model */,
 				0667963C22ADB4A300731BB8 /* View */,
 				0667963722ADACA900731BB8 /* utils */,
 				06403CBD22AD8EB10024EDA4 /* Assets.xcassets */,
@@ -173,6 +183,7 @@
 		0667963122ADA61200731BB8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				06EC38C222AF043B00DC211E /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,8 +212,17 @@
 			isa = PBXGroup;
 			children = (
 				0667963D22ADB4B400731BB8 /* RoundedViews.swift */,
+				06EC38C522AF050600DC211E /* CategoryCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		06EC38CB22AF052800DC211E /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				06EC38C622AF050600DC211E /* CategoryCell.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		15CE6E19776B15D6CEC22245 /* Pods */ = {
@@ -309,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06403CC122AD8EB10024EDA4 /* LaunchScreen.storyboard in Resources */,
+				06EC38C922AF050600DC211E /* CategoryCell.xib in Resources */,
 				06403CBE22AD8EB10024EDA4 /* Assets.xcassets in Resources */,
 				0667962C22ADA0AA00731BB8 /* GoogleService-Info.plist in Resources */,
 				06403CBC22AD8EAF0024EDA4 /* Main.storyboard in Resources */,
@@ -321,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06EC38CA22AF050600DC211E /* CategoryCell.xib in Resources */,
 				06403CD922AD8F230024EDA4 /* LaunchScreen.storyboard in Resources */,
 				0667962E22ADA33F00731BB8 /* GoogleService-Info.plist in Resources */,
 				06403CDF22AD8F7A0024EDA4 /* Assets.xcassets in Resources */,
@@ -409,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0657DBAF22AE86620041EBD3 /* Firebase+Utils.swift in Sources */,
+				06EC38C322AF043B00DC211E /* Category.swift in Sources */,
 				0667963922ADACB900731BB8 /* Extensions.swift in Sources */,
 				06403CB922AD8EAF0024EDA4 /* HomeVC.swift in Sources */,
 				0667963622ADA67800731BB8 /* RegisterVC.swift in Sources */,
@@ -417,6 +440,7 @@
 				0667963422ADA66800731BB8 /* LoginVC.swift in Sources */,
 				0657DBAC22AE7CA00041EBD3 /* ForgotPasswordVC.swift in Sources */,
 				0667963B22ADB24B00731BB8 /* Constants.swift in Sources */,
+				06EC38C722AF050600DC211E /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +450,8 @@
 			files = (
 				06403CD122AD8F220024EDA4 /* ViewController.swift in Sources */,
 				06403CCF22AD8F220024EDA4 /* AppDelegate.swift in Sources */,
+				06EC38C422AF043B00DC211E /* Category.swift in Sources */,
+				06EC38C822AF050600DC211E /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
