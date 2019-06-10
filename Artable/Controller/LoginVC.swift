@@ -24,6 +24,7 @@ class LoginVC: UIViewController {
     @IBAction func loginTapped(_ sender: Any) {
         guard let email = emailTxt.text, email.isNotEmpty,
         let password = passwordTxt.text, password.isNotEmpty else {
+            Auth.auth().simpleAlert(title: "Error", message: "Please fill out all fields", vc: self)
             return
         }
         
@@ -32,7 +33,7 @@ class LoginVC: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { (authDataResult, error) in
             self.activityIndicator.stopAnimating()
             if let error = error {
-                debugPrint(error)
+                Auth.auth().handleFireAuthError(error: error, vc: self)
                 return
             }
             
@@ -41,6 +42,10 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func forgotPasswordTapped(_ sender: Any) {
+        let vc = ForgotPasswordVC()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true, completion: nil)
     }
     
     @IBAction func guestTapped(_ sender: Any) {

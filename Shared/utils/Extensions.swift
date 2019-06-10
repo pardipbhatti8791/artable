@@ -7,9 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
     var isNotEmpty: Bool {
         return !isEmpty
     }
 }
+
+extension UIViewController {
+    
+   
+}
+
+

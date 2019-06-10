@@ -18,6 +18,9 @@
 		06403CD922AD8F230024EDA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06403CD722AD8F230024EDA4 /* LaunchScreen.storyboard */; };
 		06403CDF22AD8F7A0024EDA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06403CBD22AD8EB10024EDA4 /* Assets.xcassets */; };
 		06403CE122AD926D0024EDA4 /* LoginStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06403CE022AD926D0024EDA4 /* LoginStoryBoard.storyboard */; };
+		0657DBAC22AE7CA00041EBD3 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0657DBAA22AE7CA00041EBD3 /* ForgotPasswordVC.swift */; };
+		0657DBAD22AE7CA00041EBD3 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0657DBAB22AE7CA00041EBD3 /* ForgotPasswordVC.xib */; };
+		0657DBAF22AE86620041EBD3 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0657DBAE22AE86620041EBD3 /* Firebase+Utils.swift */; };
 		0667962C22ADA0AA00731BB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0667962B22ADA0AA00731BB8 /* GoogleService-Info.plist */; };
 		0667962E22ADA33F00731BB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0667962D22ADA33F00731BB8 /* GoogleService-Info.plist */; };
 		0667963422ADA66800731BB8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0667963322ADA66800731BB8 /* LoginVC.swift */; };
@@ -44,6 +47,9 @@
 		06403CD822AD8F230024EDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06403CDA22AD8F230024EDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06403CE022AD926D0024EDA4 /* LoginStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryBoard.storyboard; sourceTree = "<group>"; };
+		0657DBAA22AE7CA00041EBD3 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		0657DBAB22AE7CA00041EBD3 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
+		0657DBAE22AE86620041EBD3 /* Firebase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Utils.swift"; sourceTree = "<group>"; };
 		0667962B22ADA0AA00731BB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0667962D22ADA33F00731BB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0667963322ADA66800731BB8 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -103,6 +109,7 @@
 		06403CB522AD8EAF0024EDA4 /* Artable */ = {
 			isa = PBXGroup;
 			children = (
+				0657DBA922AE7C730041EBD3 /* XIBs */,
 				0667963122ADA61200731BB8 /* Model */,
 				0667963022ADA60B00731BB8 /* View */,
 				0667962F22ADA5FE00731BB8 /* Controller */,
@@ -134,6 +141,15 @@
 				06403CBD22AD8EB10024EDA4 /* Assets.xcassets */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		0657DBA922AE7C730041EBD3 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				0657DBAA22AE7CA00041EBD3 /* ForgotPasswordVC.swift */,
+				0657DBAB22AE7CA00041EBD3 /* ForgotPasswordVC.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		0667962F22ADA5FE00731BB8 /* Controller */ = {
@@ -176,6 +192,7 @@
 			children = (
 				0667963822ADACB900731BB8 /* Extensions.swift */,
 				0667963A22ADB24B00731BB8 /* Constants.swift */,
+				0657DBAE22AE86620041EBD3 /* Firebase+Utils.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -295,6 +312,7 @@
 				06403CBE22AD8EB10024EDA4 /* Assets.xcassets in Resources */,
 				0667962C22ADA0AA00731BB8 /* GoogleService-Info.plist in Resources */,
 				06403CBC22AD8EAF0024EDA4 /* Main.storyboard in Resources */,
+				0657DBAD22AE7CA00041EBD3 /* ForgotPasswordVC.xib in Resources */,
 				06403CE122AD926D0024EDA4 /* LoginStoryBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,39 +354,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Artable/Pods-Artable-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Artable/Pods-Artable-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Artable/Pods-Artable-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Artable/Pods-Artable-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Artable/Pods-Artable-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9A4D80BE49440B4FA9CB5CA6 /* [CP] Embed Pods Frameworks */ = {
@@ -376,37 +371,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D264860736AD104D421F295A /* [CP] Check Pods Manifest.lock */ = {
@@ -434,12 +408,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0657DBAF22AE86620041EBD3 /* Firebase+Utils.swift in Sources */,
 				0667963922ADACB900731BB8 /* Extensions.swift in Sources */,
 				06403CB922AD8EAF0024EDA4 /* HomeVC.swift in Sources */,
 				0667963622ADA67800731BB8 /* RegisterVC.swift in Sources */,
 				06403CB722AD8EAF0024EDA4 /* AppDelegate.swift in Sources */,
 				0667963E22ADB4B400731BB8 /* RoundedViews.swift in Sources */,
 				0667963422ADA66800731BB8 /* LoginVC.swift in Sources */,
+				0657DBAC22AE7CA00041EBD3 /* ForgotPasswordVC.swift in Sources */,
 				0667963B22ADB24B00731BB8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +629,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XFFP8A6J5;
 				INFOPLIST_FILE = ArtableAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -672,6 +649,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XFFP8A6J5;
 				INFOPLIST_FILE = ArtableAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
