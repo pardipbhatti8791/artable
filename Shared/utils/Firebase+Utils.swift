@@ -43,7 +43,6 @@ extension AuthErrorCode {
             return "You password is too weak. the must be 6 characters logn or more"
         case .wrongPassword:
             return "Your password or email is incorrect"
-            
         default:
             return "Sorry, something went wrong"
         }
